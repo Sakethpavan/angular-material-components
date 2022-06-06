@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MaterialComponentsModule } from './material-components/material-components.module';
 
-
-const routes: Routes = [];
+MaterialComponentsModule
+const routes: Routes = [
+  {
+    path: "material",
+    loadChildren : ()=> MaterialComponentsModule,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
